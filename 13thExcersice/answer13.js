@@ -43,13 +43,19 @@ switch (sim) {
         break;
 };
 
-while (true) {
-    minutes = parseInt(prompt(`How many intenrnational minutes did you use?`));
-    if(!isNaN(minutes) && minutes > 0) {
+function Fminutes() {
+let minutesW;
+    while (true) {
+    minutesW = parseInt(prompt(`How many intenrnational minutes did you use?`));
+    if(!isNaN(minutesW) && minutesW > 0) {
         break;
     };
     alert('Please into a valid number.')
 };
+return minutesW;
+};
+
+minutes = Fminutes()
 
 document.getElementById('ThirteenthAns').innerHTML = `
 <h2>${operator}</h2>

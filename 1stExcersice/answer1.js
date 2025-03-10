@@ -41,7 +41,11 @@ while (true) {
     alert(`You've to put a number, what are you trying? 🤣`);
 }
 
-document.getElementById('FirstAns').innerHTML = `<h2>MONTHLY SALARY</h2>
+function message1() {
+    return `<h2>MONTHLY SALARY</h2>
 
 <p>Hi ${username}, the number of hours is ${hours} and your salary is ${payment} <br>
 <strong>Thanks for your service 🙏</strong></p>`
+}
+
+document.getElementById('FirstAns').innerHTML = message1()

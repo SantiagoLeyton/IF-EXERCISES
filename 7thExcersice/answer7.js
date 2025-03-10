@@ -12,7 +12,9 @@ while (true) {
     };
     alert('Please select a correct option.')
 };
-if (gender == 1) {
+
+function ans7(a) {
+if (a == 1) {
 while (true) {
     age7 = parseInt(prompt(`How old are you?`));
     if(isNaN(age7) || age7 < 0){
@@ -31,8 +33,12 @@ while (true) {
 }} else {
     help7 = 40000
 };
+return help7;
+}
+
+let FinalAnsw7 = ans7(gender)
 
 document.getElementById('SeventhAns').innerHTML = `
 <h2>GOBERNMENT HELP</h2>
 
-<p><strong>The value of the help is ${help7}</strong></p>`
+<p><strong>The value of the help is ${FinalAnsw7}</strong></p>`

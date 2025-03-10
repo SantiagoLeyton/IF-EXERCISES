@@ -12,16 +12,22 @@ while (true) {
     alert("Please join a valid option");
 };
 
-if (defectiveM.includes(modelN)) {
-    msg12 = ("The car is defective, take it to warranty");
+function Fmsg11(a, b) {
+if (a.includes(b)) {
+    return ("The car is defective, take it to warranty");
 } else {
-    msg12 = ("Your car is not defective");
+    return ("Your car is not defective");
 };
 /*
 Here I used a new command again, but this command is so important and auseful
 
 .includes() is used to verify if an array have an specific element.
 */
+};
+
+msg12 = Fmsg11(defectiveM, modelN)
+
+
 
 document.getElementById('TwelfthAns').innerHTML = `
 <h2>CAR WORKSHOP</h2>

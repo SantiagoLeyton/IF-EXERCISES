@@ -150,11 +150,17 @@ ingredients = ingredientsA.length > 0 ? ingredientsA.join(", ") : "No extra ingr
         array.join(', ') - this would give me the result "1, 2, 3" because here it've a separatin.
 */
 
+function valueF(a, b, c, d) {
+    return a + b + c + d;
+}
+
+finalV = valueF(sizeV, beaconV, turkeyV, cheeseV);
+
 document.getElementById('FourteenAns').innerHTML = `
 <h2>SANDWICH ORDER</h2>
 
 <p><strong>Sandwich Size:</strong> ${size} <br>
 <strong>Ingredients:</strong> ${ingredients} <br>
-<strong>Total Price:</strong> ${sizeV + beaconV + turkeyV + cheeseV} <br>
+<strong>Total Price:</strong> ${finalV} <br>
 <br>
 <strong> THANKS FOR TOUR PURCHASE! </strong>`

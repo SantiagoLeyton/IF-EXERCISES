@@ -3,7 +3,6 @@ let washingMchSize;
 let washingMchPrice;
 let numberOfWM;
 let hour3;
-let finalNmbr;
 
 while (true) {
     washingMch = parseInt(prompt(`Which size washing machine do you want?
@@ -43,19 +42,25 @@ while (true) {
     alert('Only tell me, how many hours do you need with the machines?')
 };
 
-if (numberOfWM > 3) {
-    finalNmbr = (hour3*washingMchPrice)/0.97
-} else {
-    finalNmbr = hour3*washingMchPrice
-};
+function finalNmbr(a, b) {
+    let result;
+    if (a > 3) {
+        result = (hour3 * b) / 0.97;
+    } else {
+        result = hour3 * b;
+    }
 
-finalNmbr = finalNmbr.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-/* Here I'm using a new command again, but let me explain you
+    result = result.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    /* Here I'm using a new command again, but let me explain you
 
-1) .toLocaleString() converts a number in a chain text according to the language or region's configuration.
-2) 'en-US' specify the format of United States
-3) minimumFractionDigits: 2 - Ensures that there are always at least 2 decimal places
-4) maximumFractionDigits: 2 - Limit to a maximum of 2 decimals
-*/
+    1) .toLocaleString() converts a number in a chain text according to the language or region's configuration.
+    2) 'en-US' specify the format of United States
+    3) minimumFractionDigits: 2 - Ensures that there are always at least 2 decimal places
+    4) maximumFractionDigits: 2 - Limit to a maximum of 2 decimals
+    */
+    return result;
+}
 
-document.getElementById('ThirdAns').innerHTML = `Total price to rent ${numberOfWM} wching machines size ${washingMchSize} for ${hour3} hours: ${finalNmbr}`;
+let totalPrice = finalNmbr(numberOfWM, washingMchPrice);
+
+document.getElementById("ThirdAns").innerHTML = `Total price to rent ${numberOfWM} washing machines (size ${washingMchSize}) for ${hour3} hours: ${totalPrice}`;

@@ -1,6 +1,5 @@
 let A1;
 let A2;
-let A3;
 
 alert(`Welcome! today we'll make a triangle, you only have to tell me the measure of interior angles.
         
@@ -20,7 +19,12 @@ while (true) {
     };
     alert(`Please join a valid number, remeber that de summary of the first and second interior angle can't be equal to or higher than 180`)
 };
-A3 = 180-A2-A1;
+
+function Angle3(a, b) {
+    return 180-a-b;
+};
+
+let A3 = Angle3(A1, A2);
 
 document.getElementById('NinethAns').innerHTML = `
 <h2>INTERIOR ANGLES OF A TRIANGLE</h2>

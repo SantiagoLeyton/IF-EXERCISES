@@ -27,15 +27,20 @@ while (true) {
     };
 };
 
-if (N1 > N2 && N1 > N3) {
-    msg6 = `${N1} is higher than ${N2} or ${N3}`;
-} else if (N2 > N1 && N2 > N3) {
-    msg6 = `${N2} is higher than ${N1} or ${N3}`;
-} else {
-    msg6 = `${N3} is higher than ${N1} or ${N2}`;
+function FMsg6(a, b, c) {
+    if (a > b && a > c) {
+        msg6 = `${a} is higher than ${b} or ${c}`;
+    } else if (b > a && b > c) {
+        msg6 = `${b} is higher than ${a} or ${c}`;
+    } else {
+        msg6 = `${c} is higher than ${a} or ${b}`;
+    };
+    return msg6;
 };
+
+let FinalMsg6 = FMsg6(N1, N2, N3)
 
 document.getElementById('SixthAns').innerHTML = `
 <h2>WHICH IS THE HIGHEST NUMBER?</h2>
 
-<p>${msg6}</p>`
+<p>${FinalMsg6}</p>`

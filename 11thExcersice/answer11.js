@@ -3,6 +3,7 @@ let HDD;
 let unity;
 let msg11;
 
+function Fmsg11() {
 while (true) {
     funnySound = parseInt(prompt(`When you turn on your PC, does it make a beep sound?\n1. Yes\n2. No`));
     if (!isNaN(funnySound) && (funnySound === 1 || funnySound === 2)) break;
@@ -46,9 +47,8 @@ if (funnySound && HDD) {
 } else {
     msg11 = HDD ? `Check speaker connections.` : `Take the computer to the repair center.`;
 }
+
+return msg11
 }
-
-document.getElementById('EleventhAns').innerHTML = `
-<h2>¿HAVE YOU TO FIX YOUR PC?</h2>
-
-<p><strong>Your pc status is:</strong> ${msg11}`
+};
+document.getElementById('EleventhAns').innerHTML = Fmsg11()
